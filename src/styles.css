@@ -1,4 +1,65 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background-color: rgb(255, 248, 215);
+}
+
 .App {
   font-family: sans-serif;
   text-align: center;
+}
+
+.number-inputs {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.center {
+  margin: auto;
+}
+
+.input-area {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.h3-label {
+  margin: 0;
+  padding-right: 10px;
+}
+
+button {
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+  padding: 10px 0px;
+  background-color: rgb(92, 198, 212);
+}
+
+.input-area {
+  background-color: rgb(250, 235, 152);
+}
+
+.answer {
+  background-color: rgb(255, 248, 215);
+  padding: 20px;
+  margin: 0;
+}
+
+.title h1 {
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 4px;
+  box-shadow: 10px 6px 3px rgb(195, 190, 190);
+  background-color: rgb(254, 255, 206);
+  border-style: solid;
+  border-color: rgb(171, 149, 149);
 }

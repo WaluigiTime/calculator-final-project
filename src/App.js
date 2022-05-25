@@ -15,7 +15,10 @@ export default function App() {
   const [ans, setAns] = useState(0);
   return (
     <div className="App">
-      <h1>
+      <div className="title">
+        <h1> Calculator </h1>
+      </div>
+      <section className="buttons">
         <Button
           buttonLabel={"+"}
           onClickHandler={() => {
@@ -52,38 +55,54 @@ export default function App() {
         />
 
         <Button
-          buttonLabel={"Sqrt X"}
+          buttonLabel={
+            <math>
+              <msqrt>X</msqrt>
+            </math>
+          }
           onClickHandler={() => {
             setAns(sqrrootFunc(x));
           }}
         />
 
         <Button
-          buttonLabel={"Sqrt Y"}
+          buttonLabel={
+            <math>
+              <msqrt>Y</msqrt>
+            </math>
+          }
           onClickHandler={() => {
             setAns(sqrrootFunc(y));
           }}
         />
 
         <Button
-          buttonLabel={"X^y"}
+          buttonLabel={
+            <math>
+              <msup>
+                <mi>X</mi>
+                <mn>y</mn>
+              </msup>
+            </math>
+          }
           onClickHandler={() => {
             setAns(powFunc(x, y));
           }}
         />
+        <Button
+          buttonLabel={"Clear"}
+          onClickHandler={() => {
+            setAns(0);
+            setX(0);
+            setY(0);
+          }}
+        />
+      </section>
 
-        <div>
-          <Button
-            buttonLabel={"Clear"}
-            onClickHandler={() => {
-              setAns(0);
-              setX(0);
-              setY(0);
-            }}
-          />
-        </div>
-        <div>
-          x{" "}
+      <div></div>
+      <div className="input-area">
+        <div className="number-inputs">
+          <h3 className="h3-label">x</h3>
           <input
             type="number"
             value={x}
@@ -92,8 +111,8 @@ export default function App() {
             }}
           />
         </div>
-        <div>
-          y{" "}
+        <div className="number-inputs">
+          <h3 className="h3-label">y</h3>
           <input
             type="number"
             value={y}
@@ -102,9 +121,9 @@ export default function App() {
             }}
           />
         </div>
-      </h1>
+      </div>
 
-      <div>{ans}</div>
+      <h1 className="answer">{ans}</h1>
     </div>
   );
 }
